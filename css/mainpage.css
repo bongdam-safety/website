@@ -1,0 +1,114 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+header > a {
+  text-decoration: none;
+  color: black;
+}
+
+.logo {
+  margin: 5px;
+  padding: 5px;
+
+  border-radius: 5px;
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
+  
+  color:purple;
+  font-weight:bold;
+  font-size: 40px;
+  text-shadow: 2px 1px 1px purple;
+  -webkit-text-stroke: 1px white;
+}
+
+.headerButton {
+  border-radius: 5px;
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
+
+  margin-top: 10px;
+  margin-bottom: 30px;
+  margin-right: 10px;
+  padding: 5px;
+}
+
+#categories {
+  list-style: none;
+  padding-left: 0;
+  position: absolute;
+  z-index: 2;
+}
+
+#categories > li > button {
+  font-size: 15px;
+  width: 70px;
+  height: 55px;
+  margin: 2px;
+}
+
+.mapUnder {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mapUnder > ul {
+  display: flex;
+  list-style: none;
+  margin-left: 10px;
+  padding: 0px;
+}
+
+.mapUnder > ul > li > button {
+  margin-top: 10px;
+  margin-right: 2px;
+  padding: 5px 10px;
+  font-size: 15px;
+}
+
+.mapUnder > button {
+  margin-top:15px;
+  margin-right: 10px;
+  padding: 5px 10px;
+}
+
+.selectedFacility > .upper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.selectedFacility > .upper > h2 {
+  font-size: 25px;
+  margin: 15px 5px;
+}
+
+.selectedFacility > .upper > button {
+  height: 30px;
+  margin-top: 10px;
+  margin-right: 5px;
+  
+}
+
+table {
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
+  border-collapse: collapse;
+
+  margin: 10px;
+  width: calc(100% - 20px);
+}
+
+table > tbody > tr > th {
+  border: 1px solid black;
+  font-size: 17px;
+  padding: 5px;
+}
+
+table > tbody > tr > .tableElement {
+  width: 40px;
+}

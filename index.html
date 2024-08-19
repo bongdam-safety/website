@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>봉담읍 마을안전지도 - 방범CCTV</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/mainpage.css">
+  <link rel="icon" href="./favicon.ico">
+</head>
+
+<body>
+  <header>
+    <a href="./index.html"><h1 class="logo">봉담 마을안전지도</h1></a>
+    <a href="./login.html" class="headerButton">관리자 로그인</a>
+  </header>
+  <section class="map">
+    <div id="mainmap">
+      <ul id="categories">
+        <li><button type="button">방범CCTV</button></li>
+        <li><button type="button">비상벨</button></li>
+        <li><button type="button">안심지킴이집·지구대</button></li>
+        <li><button type="button">로고젝터</button></li>
+        <li><button type="button">기타</button></li>
+      </ul>
+      <!-- 지도 div -->
+      <div id="map_markers" style="width:100%;height:350px;"></div>
+      <!-- 지도 javascript -->
+      <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=3d142012b05c8bad3834eb49f5b82334"></script>
+      <script src="./js/map_marker_appear.js"></script>
+    </div>
+    
+    <div class="mapUnder">
+      <ul>
+        <script src="./js/map_zoomIn_zoomOut.js"></script>
+        <li><button type="button" onclick="zoomIn()">확대</button></li>
+        <li><button type="button" onclick="zoomOut()">축소</button></li>
+      </ul>
+      <button type="button">시설물 추가요청</button>
+    </div>
+  </section>
+  <br><hr><br>
+  <section class="selectedFacility">
+    <div class="upper">
+      <h2>선택된 시설물</h2>
+      <button type="button">정보 수정요청</button>
+    </div>
+    <table border="1">
+      <tr>
+        <th class="tableElement">분류</th>
+        <th>CCTV</th>
+      </tr>
+      <tr>
+        <th class="tableElement">제목</th>
+        <th>와우리 방범 CCTV</th>
+      </tr>
+      <tr>
+        <th class="tableElement">내용</th>
+        <th>와우리 OO건물 오른쪽에 위치한 방범용 CCTV입니다. 와우리 00번지에 위치하고 있습니다.</th>
+      </tr>
+      <tr>
+        <th class="tableElement">사진</th>
+        <th></th>
+      </tr>
+      <tr>
+        <th class="tableElement">번호</th>
+        <th>10</th>
+      </tr>
+    </table>
+  </section>
+</body>
+</html>
