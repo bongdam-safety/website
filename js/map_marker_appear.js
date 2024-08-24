@@ -1,3 +1,6 @@
+// https://apis.map.kakao.com/web/sample/multipleMarkerImage/
+// 메인페이지(index.html)에 지도를 표시하는 자바스크립트 코드입니다.
+
 var mapContainer = document.getElementById('map_markers'), // 지도를 표시할 div  
     mapOption = { 
         center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
