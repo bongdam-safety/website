@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>봉담읍 마을안전지도 - 정보 수정요청 조회</title>
+  <link rel="stylesheet" href="./../css/reset.css">
+  <link rel="stylesheet" href="./../css/admin_request_edit.css">
+  <link rel="icon" href="./../favicon.ico">
+</head>
+<body>
+  <header>
+    <a href="./index.html"><h1 class="logo">봉담 마을안전지도</h1></a>
+    <a href="./login.html" class="headerButton">관리자 로그인</a>
+  </header>
+  <section>
+    <h2>정보 수정 요청</h2>
+    <hr>
+    <table class="requestItemTitle">
+      <tbody>
+        <tr>
+          <td><h3>요청글 제목</h3></td>
+          <td>이곳에 제목이 입력됩니다.</td>
+        </tr>
+      </tbody>
+    </table>
+    <h4>기존 위치</h4>
+    <!-- 지도 div -->
+    <div id="original_location" style="width:100%;height:200px;"></div>
+    <!-- 지도 javascript -->
+    <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=3d142012b05c8bad3834eb49f5b82334&libraries=services"></script>
+    <script src="./../js/map_admin_request_edit_original.js"></script>
+    <h3>요청사항</h3>
+    <div class="requestContent">마커의 위치가 잘못되었기에, 수정이 필요합니다.</div>
+    <h4>지정 위치</h4>
+    <!-- 지도 div -->
+    <div id="new_location" style="width:100%;height:200px;"></div>
+    <!-- 지도 javascript -->
+    <script src="./../js/map_getAddress.js"></script>
+    <script src="./../js/map_admin_request_edit_new.js"></script>
+    <div id="newLatLng"></div>
+    <div class="changeLocationCheckbox">
+      <input type="checkbox" id="changeLocation" name="changeLocation" />
+      <label for="changeLocation">마커 위치를 이곳으로 변경</label>
+    </div>
+    <br>
+    <h3>요청 첨부 사진</h3>
+    <!-- 사진 이곳에 삽입 --><br><br><br>
+  </section>
+  <hr>
+  <section>
+    <h3>정보 수정</h3>
+    <div class="labelAndInput">
+      <label for="category-select">분류</label>
+      <select id="category-select" name="category">
+        <option value="">분류를 선택하세요</option>
+        <option value="방범CCTV">방범CCTV</option>
+        <option value="비상벨">비상벨</option>
+        <option value="안심지킴이집·지구대">안심지킴이집·지구대</option>
+        <option value="로고젝터">로고젝터</option>
+        <option value="기타">기타</option>
+      </select>
+    </div>
+    <span class="spanUnderLabelAndInput">장소의 분류를 선택해주세요.</span><br><br>
+    <div class="labelAndInput">
+      <label for="content-textarea">내용</label>
+      <textarea id="content-textarea" name="content" rows="5" cols="33">
+      </textarea>
+    </div><br>
+    <h4>기존 사진</h4>
+    <!-- 사진 이곳에 삽입 --><br><br><br>
+    <fieldset>
+      <legend>기존의 첫번째 사진</legend>
+
+      <div>
+        <input type="radio" id="keep1" name="first" value="keep1" checked />
+        <label for="keep1">기존 사진 유지</label>
+      </div>
+    
+      <div>
+        <input type="radio" id="firstTo1" name="first" value="firstTo1" />
+        <label for="firstTo1">요청의 첫번째 사진으로 사진 변경</label>
+      </div>
+    
+      <div>
+        <input type="radio" id="secondTo1" name="first" value="secondTo1" />
+        <label for="secondTo1">요청의 두번째 사진으로 사진 변경</label>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>기존의 두번째 사진</legend>
+      
+      <div>
+        <input type="radio" id="keep2" name="second" value="keep2" checked />
+        <label for="keep2">기존 사진 유지</label>
+      </div>
+    
+      <div>
+        <input type="radio" id="firstTo2" name="second" value="firstTo2" />
+        <label for="firstTo2">요청의 첫번째 사진으로 사진 변경</label>
+      </div>
+    
+      <div>
+        <input type="radio" id="secondTo2" name="second" value="secondTo2" />
+        <label for="secondTo2">요청의 두번째 사진으로 사진 변경</label>
+      </div>
+    </fieldset>
+    
+  </section>
+  <br><br>
+  <div class="buttons">
+    <button type="button" class="dataProcessButton">저장</button>
+    <button type="button" class="dataProcessButton">수정 거부</button>
+    <button type="button" class="dataProcessButton">장소 삭제</button>
+  </div>
+</body>
+</html>
