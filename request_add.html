@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시설물 추가 요청</title>
+    <link rel="stylesheet" href="./css/request_add.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+    <div class="title-box">봉담 마을 안전 지도</div>
+    <div class="request-box">시설물 추가 요청</div>
+    <div class="map-section">
+            <div class="map-container" id="map">
+                지도 위치
+            </div>
+            <div class="click-text">지도를 클릭해 주세요!</div>
+            <div class="map-location" id="map-location">위도와 경도가 표시될 자리</div>
+    </div>
+
+    <div class="option-section">
+        <div class="option-box">
+            분류
+        </div>
+        <div class="dropdown">
+            <select id="option-dropdown">
+                <option value="option1">옵션 1</option>
+                <option value="option2">옵션 2</option>
+                <option value="option3">옵션 3</option>
+            </select>
+        </div>
+    </div>
+    <div class="location-text">장소 분류를 선택해 주세요.</div>
+
+    <div class="name-section">
+        <div class="name-box">
+            제목
+        </div>
+        <input type="text" class="name-input" placeholder="제목을 입력하세요">
+    </div>
+
+    <div class="content-section">
+        <div class="content-box">내용</div>
+        <textarea class="content-input" rows="12" placeholder=""></textarea>
+    </div>
+    <div class="content-text">해당 장소에 대한 설명을 작성해 주세요</div>
+
+    <div class="image-section">
+        <div class="image-box">사진</div>
+        <div class="image-container">
+            <input type="file" class="image-input">
+        </div>
+        <div class="image-container">
+            <input type="file" class="image-input">
+        </div>
+    </div>
+    <div class="image-text">해당 장소를 촬영한 사진을 등록해 주세요</div>
+
+    <div class="notes-section">
+        <div class="notes-box">비고</div>
+        <textarea class="notes-input" rows="12" placeholder=""></textarea>
+    </div>
+    <div class="notes-text">참고사항이 있다면 작성해 주세요.</div>
+
+    <div class="submit-section">
+        <button class="submit-button">제출하기</button>
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="./js/request_add.js"></script>
+</body>
+</html>
